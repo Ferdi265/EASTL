@@ -11,12 +11,6 @@ option(EASTL_BUILD_BENCHMARK "Enable generation of build files for benchmark" OF
 option(EASTL_BUILD_TESTS "Enable generation of build files for tests" OFF)
 
 #-------------------------------------------------------------------------------------------
-# Compiler Flags
-#-------------------------------------------------------------------------------------------
-set (CMAKE_MODULE_PATH "${CMAKE_MODULE_PATH};${CMAKE_CURRENT_SOURCE_DIR}/scripts/CMake")
-include(CommonCppFlags)
-
-#-------------------------------------------------------------------------------------------
 # Library definition
 #-------------------------------------------------------------------------------------------
 file(GLOB EASTL_SOURCES "source/*.cpp")
