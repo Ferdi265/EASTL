@@ -5,24 +5,10 @@ cmake_minimum_required(VERSION 3.1)
 project(EASTL CXX)
 
 #-------------------------------------------------------------------------------------------
-# Options
-#-------------------------------------------------------------------------------------------
-option(EASTL_BUILD_BENCHMARK "Enable generation of build files for benchmark" OFF)
-option(EASTL_BUILD_TESTS "Enable generation of build files for tests" OFF)
-
-#-------------------------------------------------------------------------------------------
 # Library definition
 #-------------------------------------------------------------------------------------------
 file(GLOB EASTL_SOURCES "source/*.cpp")
 add_library(EASTL ${EASTL_SOURCES})
-
-if(EASTL_BUILD_BENCHMARK)
-    add_subdirectory(benchmark)
-endif()
-
-if(EASTL_BUILD_TESTS)
-    add_subdirectory(test)
-endif()
 
 #-------------------------------------------------------------------------------------------
 # Defines
